@@ -11,7 +11,7 @@ public class Manager : MonoBehaviour
     InputManager _input = new InputManager();
     ResourcManager _resource = new ResourcManager();
     public static InputManager Input { get { return Instance._input; } }
-    public static ResourcManager Resourc { get { return Instance._resource; } }
+    public static ResourcManager Resource { get { return Instance._resource; } }
 
     void Start()
     {

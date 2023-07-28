@@ -10,8 +10,10 @@ public class Manager : MonoBehaviour
 
     InputManager _input = new InputManager();
     ResourcManager _resource = new ResourcManager();
+    UIManager _ui = new UIManager();
     public static InputManager Input { get { return Instance._input; } }
     public static ResourcManager Resource { get { return Instance._resource; } }
+    public static UIManager UI { get { return Instance._ui; } }
 
     void Start()
     {
@@ -27,10 +29,10 @@ public class Manager : MonoBehaviour
     {
         if(s_instance == null)
         {
-            GameObject go = GameObject.Find("@Managers");
+            GameObject go = GameObject.Find("@Manager");
             if(go == null)
             {
-                go = new GameObject { name = "@Managers" };
+                go = new GameObject { name = "@Manager" };
                 go.AddComponent<Manager>();
             }
             DontDestroyOnLoad(go);

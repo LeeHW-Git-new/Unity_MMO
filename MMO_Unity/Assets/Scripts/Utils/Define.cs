@@ -11,6 +11,12 @@ public class Define
         Lobby,
         Game,
     }
+    public enum Sound
+    {
+        BGM,
+        Effect,
+        MaxCount,
+    }
     public enum UIEvent
     {
         Click,
